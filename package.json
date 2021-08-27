@@ -1,0 +1,20 @@
+{
+  "name": "vueStudy",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^1.2.3",
+    "vant": "^3.1.2",
+    "vite": "^2.3.7",
+    "vue": "^3.0.0-rc.1",
+    "vue-router": "^4.0.9",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.0-rc.1",
+    "vite-plugin-style-import": "^1.0.1"
+  }
+}
