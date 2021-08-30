@@ -1,10 +1,10 @@
 /*
- * @Descripttion: 
+ * @Description: 
  * @version: 
  * @Author: gongwannan
  * @Date: 2021-06-18 09:26:55
- * @LastEditors: gongwannan
- * @LastEditTime: 2021-08-19 17:12:49
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-08-27 10:55:00
  */
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
