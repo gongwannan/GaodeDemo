@@ -1,20 +1,30 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add vant@next
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add sass sass--loader node-sass
 
 PATH: 
-  D:\oracleClient\product\11.2.0\client_1\bin;D:\oracle\oracleBase\oracleClient;D:\oracle\oracleBase\oracleServe\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\java\bin;D:\java\jre\bin;D:\mysql-8.0.11-winx64\bin;D:\cmder\vendor\git-for-windows\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\TortoiseSVN\bin;D:\nvm;C:\Program Files\nodejs;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;D:\EasyShare\x86\;D:\EasyShare\x64\;D:\node\node_global;C:\Users\Hasee\AppData\Local\Yarn\Data\global\node_modules\.bin;C:\Program Files\TortoiseGit\bin;D:\python\Scripts\;D:\python\;C:\Users\Hasee\AppData\Local\Microsoft\WindowsApps;D:\VsCode\Microsoft VS Code\bin;C:\Users\Hasee\AppData\Local\Yarn\bin;C:\Users\Hasee\.deno\bin;D:\Fiddler;D:\nvm;C:\Program Files\nodejs;C:\Users\Hasee\AppData\Local\Microsoft\WindowsApps;;D:\DevEco Studio 2.2.0.200\bin;
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\cmder\vendor\git-for-windows\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Yarn\bin\;D:\nvm;C:\Program Files\nodejs;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;D:\node\node_global;C:\Users\Hasee\AppData\Local\Yarn\Data\global\node_modules\.bin;C:\Program Files\TortoiseGit\bin;C:\Program Files\TortoiseSVN\bin;D:\python\Scripts\;D:\python\;C:\Users\Hasee\AppData\Local\Microsoft\WindowsApps;D:\VsCode\Microsoft VS Code\bin;C:\Users\Hasee\AppData\Local\Yarn\bin;C:\Users\Hasee\.deno\bin;D:\Fiddler;D:\nvm;C:\Program Files\nodejs;C:\Users\Hasee\AppData\Local\Microsoft\WindowsApps;
 
 Yarn version: 
   1.22.4
 
 Node version: 
-  14.16.1
+  14.17.4
 
 Platform: 
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'D:\WorkSet\vue\vueStudy\node_modules\esbuild\esbuild.exe'
+  Error: https://registry.npm.taobao.org/sass--loader: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:66096:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140748:22)
+      at Request.emit (events.js:400:28)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141720:10)
+      at Request.emit (events.js:400:28)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141642:12)
+      at Object.onceWrapper (events.js:519:28)
+      at IncomingMessage.emit (events.js:412:35)
+      at endReadableNT (internal/streams/readable.js:1317:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
 
 npm manifest: 
   {
@@ -26,6 +36,8 @@ npm manifest:
     },
     "dependencies": {
       "@vitejs/plugin-vue": "^1.2.3",
+      "typescript": "^4.4.2",
+      "vant": "^3.1.2",
       "vite": "^2.3.7",
       "vue": "^3.0.0-rc.1",
       "vue-router": "^4.0.9",
@@ -62,6 +74,41 @@ Lockfile:
     dependencies:
       "@babel/helper-validator-identifier" "^7.14.5"
       to-fast-properties "^2.0.0"
+  
+  "@popperjs/core@^2.9.2":
+    version "2.9.2"
+    resolved "https://registry.npm.taobao.org/@popperjs/core/download/@popperjs/core-2.9.2.tgz?cache=0&sync_timestamp=1617291042068&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40popperjs%2Fcore%2Fdownload%2F%40popperjs%2Fcore-2.9.2.tgz#adea7b6953cbb34651766b0548468e743c6a2353"
+    integrity sha1-rep7aVPLs0ZRdmsFSEaOdDxqI1M=
+  
+  "@rollup/pluginutils@^4.1.0":
+    version "4.1.0"
+    resolved "https://registry.npm.taobao.org/@rollup/pluginutils/download/@rollup/pluginutils-4.1.0.tgz#0dcc61c780e39257554feb7f77207dceca13c838"
+    integrity sha1-Dcxhx4DjkldVT+t/dyB9zsoTyDg=
+    dependencies:
+      estree-walker "^2.0.1"
+      picomatch "^2.2.2"
+  
+  "@vant/icons@^1.6.0":
+    version "1.6.0"
+    resolved "https://registry.nlark.com/@vant/icons/download/@vant/icons-1.6.0.tgz?cache=0&sync_timestamp=1621321922501&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40vant%2Ficons%2Fdownload%2F%40vant%2Ficons-1.6.0.tgz#3db7eb7f963f51a2a08676720d5af9c4c3512feb"
+    integrity sha1-Pbfrf5Y/UaKghnZyDVr5xMNRL+s=
+  
+  "@vant/lazyload@^1.2.0":
+    version "1.2.0"
+    resolved "https://registry.nlark.com/@vant/lazyload/download/@vant/lazyload-1.2.0.tgz#62e9779bd7844ad8f71c2ca2bf852e6147c7a86d"
+    integrity sha1-Yul3m9eEStj3HCyiv4UuYUfHqG0=
+  
+  "@vant/popperjs@^1.1.0":
+    version "1.1.0"
+    resolved "https://registry.npm.taobao.org/@vant/popperjs/download/@vant/popperjs-1.1.0.tgz?cache=0&sync_timestamp=1617714772966&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vant%2Fpopperjs%2Fdownload%2F%40vant%2Fpopperjs-1.1.0.tgz#b4edee5bbfa6fb18705986e313d4fd5f17942a0f"
+    integrity sha1-tO3uW7+m+xhwWYbjE9T9XxeUKg8=
+    dependencies:
+      "@popperjs/core" "^2.9.2"
+  
+  "@vant/use@^1.1.2":
+    version "1.1.2"
+    resolved "https://registry.nlark.com/@vant/use/download/@vant/use-1.1.2.tgz#d35265e05df88a47b04196a308efb5e89e44ca10"
+    integrity sha1-01Jl4F34ikewQZajCO+16J5EyhA=
   
   "@vitejs/plugin-vue@^1.2.3":
     version "1.2.3"
@@ -161,6 +208,41 @@ Lockfile:
     resolved "https://registry.npm.taobao.org/bluebird/download/bluebird-3.7.2.tgz?cache=0&sync_timestamp=1602657218976&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbluebird%2Fdownload%2Fbluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
     integrity sha1-nyKcFb4nJFT/qXOs4NvueaGww28=
   
+  camel-case@^4.1.2:
+    version "4.1.2"
+    resolved "https://registry.npm.taobao.org/camel-case/download/camel-case-4.1.2.tgz?cache=0&sync_timestamp=1606867311564&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcamel-case%2Fdownload%2Fcamel-case-4.1.2.tgz#9728072a954f805228225a6deea6b38461e1bd5a"
+    integrity sha1-lygHKpVPgFIoIlpt7qazhGHhvVo=
+    dependencies:
+      pascal-case "^3.1.2"
+      tslib "^2.0.3"
+  
+  capital-case@^1.0.4:
+    version "1.0.4"
+    resolved "https://registry.npm.taobao.org/capital-case/download/capital-case-1.0.4.tgz?cache=0&sync_timestamp=1606867282943&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcapital-case%2Fdownload%2Fcapital-case-1.0.4.tgz#9d130292353c9249f6b00fa5852bee38a717e669"
+    integrity sha1-nRMCkjU8kkn2sA+lhSvuOKcX5mk=
+    dependencies:
+      no-case "^3.0.4"
+      tslib "^2.0.3"
+      upper-case-first "^2.0.2"
+  
+  change-case@^4.1.2:
+    version "4.1.2"
+    resolved "https://registry.npm.taobao.org/change-case/download/change-case-4.1.2.tgz#fedfc5f136045e2398c0410ee441f95704641e12"
+    integrity sha1-/t/F8TYEXiOYwEEO5EH5VwRkHhI=
+    dependencies:
+      camel-case "^4.1.2"
+      capital-case "^1.0.4"
+      constant-case "^3.0.4"
+      dot-case "^3.0.4"
+      header-case "^2.0.4"
+      no-case "^3.0.4"
+      param-case "^3.0.4"
+      pascal-case "^3.1.2"
+      path-case "^3.0.4"
+      sentence-case "^3.0.4"
+      snake-case "^3.0.4"
+      tslib "^2.0.3"
+  
   colorette@^1.2.2:
     version "1.2.2"
     resolved "https://registry.nlark.com/colorette/download/colorette-1.2.2.tgz?cache=0&sync_timestamp=1618847174680&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcolorette%2Fdownload%2Fcolorette-1.2.2.tgz#cbcc79d5e99caea2dbf10eb3a26fd8b3e6acfa94"
@@ -173,6 +255,15 @@ Lockfile:
     dependencies:
       bluebird "^3.7.2"
   
+  constant-case@^3.0.4:
+    version "3.0.4"
+    resolved "https://registry.npm.taobao.org/constant-case/download/constant-case-3.0.4.tgz?cache=0&sync_timestamp=1606867255831&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fconstant-case%2Fdownload%2Fconstant-case-3.0.4.tgz#3b84a9aeaf4cf31ec45e6bf5de91bdfb0589faf1"
+    integrity sha1-O4Sprq9M8x7EXmv13pG9+wWJ+vE=
+    dependencies:
+      no-case "^3.0.4"
+      tslib "^2.0.3"
+      upper-case "^2.0.2"
+  
   cssesc@^3.0.0:
     version "3.0.0"
     resolved "https://registry.npm.taobao.org/cssesc/download/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
@@ -183,10 +274,30 @@ Lockfile:
     resolved "https://registry.nlark.com/csstype/download/csstype-2.6.17.tgz?cache=0&sync_timestamp=1618818393132&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcsstype%2Fdownload%2Fcsstype-2.6.17.tgz#4cf30eb87e1d1a005d8b6510f95292413f6a1c0e"
     integrity sha1-TPMOuH4dGgBdi2UQ+VKSQT9qHA4=
   
+  debug@^4.3.2:
+    version "4.3.2"
+    resolved "https://registry.nlark.com/debug/download/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
+    integrity sha1-8KScGKyHeeMdSgxgKd+3aHPHQos=
+    dependencies:
+      ms "2.1.2"
+  
+  dot-case@^3.0.4:
+    version "3.0.4"
+    resolved "https://registry.npm.taobao.org/dot-case/download/dot-case-3.0.4.tgz?cache=0&sync_timestamp=1606867255091&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdot-case%2Fdownload%2Fdot-case-3.0.4.tgz#9b2b670d00a431667a8a75ba29cd1b98809ce751"
+    integrity sha1-mytnDQCkMWZ6inW6Kc0bmICc51E=
+    dependencies:
+      no-case "^3.0.4"
+      tslib "^2.0.3"
+  
   emojis-list@^3.0.0:
     version "3.0.0"
     resolved "https://registry.npm.taobao.org/emojis-list/download/emojis-list-3.0.0.tgz#5570662046ad29e2e916e71aae260abdff4f6a78"
     integrity sha1-VXBmIEatKeLpFucariYKvf9Pang=
+  
+  es-module-lexer@^0.6.0:
+    version "0.6.0"
+    resolved "https://registry.nlark.com/es-module-lexer/download/es-module-lexer-0.6.0.tgz#e72ab05b7412e62b9be37c37a09bdb6000d706f0"
+    integrity sha1-5yqwW3QS5iub43w3oJvbYADXBvA=
   
   esbuild@^0.12.5:
     version "0.12.9"
@@ -227,6 +338,14 @@ Lockfile:
     resolved "https://registry.npm.taobao.org/hash-sum/download/hash-sum-2.0.0.tgz#81d01bb5de8ea4a214ad5d6ead1b523460b0b45a"
     integrity sha1-gdAbtd6OpKIUrV1urRtSNGCwtFo=
   
+  header-case@^2.0.4:
+    version "2.0.4"
+    resolved "https://registry.npm.taobao.org/header-case/download/header-case-2.0.4.tgz#5a42e63b55177349cf405beb8d775acabb92c063"
+    integrity sha1-WkLmO1UXc0nPQFvrjXdayruSwGM=
+    dependencies:
+      capital-case "^1.0.4"
+      tslib "^2.0.3"
+  
   icss-replace-symbols@^1.1.0:
     version "1.1.0"
     resolved "https://registry.npm.taobao.org/icss-replace-symbols/download/icss-replace-symbols-1.1.0.tgz#06ea6f83679a7749e386cfe1fe812ae5db223ded"
@@ -265,6 +384,13 @@ Lockfile:
     resolved "https://registry.npm.taobao.org/lodash.camelcase/download/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
     integrity sha1-soqmKIorn8ZRA1x3EfZathkDMaY=
   
+  lower-case@^2.0.2:
+    version "2.0.2"
+    resolved "https://registry.npm.taobao.org/lower-case/download/lower-case-2.0.2.tgz#6fa237c63dbdc4a82ca0fd882e4722dc5e634e28"
+    integrity sha1-b6I3xj29xKgsoP2ILkci3F5jTig=
+    dependencies:
+      tslib "^2.0.3"
+  
   lru-cache@^5.1.1:
     version "5.1.1"
     resolved "https://registry.npm.taobao.org/lru-cache/download/lru-cache-5.1.1.tgz?cache=0&sync_timestamp=1615683082252&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flru-cache%2Fdownload%2Flru-cache-5.1.1.tgz#1da27e6710271947695daf6848e847f01d84b920"
@@ -291,15 +417,57 @@ Lockfile:
     resolved "https://registry.nlark.com/minimist/download/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
     integrity sha1-Z9ZgFLZqaoqqDAg8X9WN9OTpdgI=
   
+  ms@2.1.2:
+    version "2.1.2"
+    resolved "https://registry.npm.taobao.org/ms/download/ms-2.1.2.tgz?cache=0&sync_timestamp=1607433856030&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fms%2Fdownload%2Fms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
+    integrity sha1-0J0fNXtEP0kzgqjrPM0YOHKuYAk=
+  
   nanoid@^3.1.23:
     version "3.1.23"
     resolved "https://registry.nlark.com/nanoid/download/nanoid-3.1.23.tgz?cache=0&sync_timestamp=1620674856899&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fnanoid%2Fdownload%2Fnanoid-3.1.23.tgz#f744086ce7c2bc47ee0a8472574d5c78e4183a81"
     integrity sha1-90QIbOfCvEfuCoRyV01ceOQYOoE=
   
+  no-case@^3.0.4:
+    version "3.0.4"
+    resolved "https://registry.npm.taobao.org/no-case/download/no-case-3.0.4.tgz#d361fd5c9800f558551a8369fc0dcd4662b6124d"
+    integrity sha1-02H9XJgA9VhVGoNp/A3NRmK2Ek0=
+    dependencies:
+      lower-case "^2.0.2"
+      tslib "^2.0.3"
+  
+  param-case@^3.0.4:
+    version "3.0.4"
+    resolved "https://registry.npm.taobao.org/param-case/download/param-case-3.0.4.tgz?cache=0&sync_timestamp=1606867311360&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fparam-case%2Fdownload%2Fparam-case-3.0.4.tgz#7d17fe4aa12bde34d4a77d91acfb6219caad01c5"
+    integrity sha1-fRf+SqEr3jTUp32RrPtiGcqtAcU=
+    dependencies:
+      dot-case "^3.0.4"
+      tslib "^2.0.3"
+  
+  pascal-case@^3.1.2:
+    version "3.1.2"
+    resolved "https://registry.npm.taobao.org/pascal-case/download/pascal-case-3.1.2.tgz?cache=0&sync_timestamp=1606867255187&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpascal-case%2Fdownload%2Fpascal-case-3.1.2.tgz#b48e0ef2b98e205e7c1dae747d0b1508237660eb"
+    integrity sha1-tI4O8rmOIF58Ha50fQsVCCN2YOs=
+    dependencies:
+      no-case "^3.0.4"
+      tslib "^2.0.3"
+  
+  path-case@^3.0.4:
+    version "3.0.4"
+    resolved "https://registry.npm.taobao.org/path-case/download/path-case-3.0.4.tgz?cache=0&sync_timestamp=1606867671723&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpath-case%2Fdownload%2Fpath-case-3.0.4.tgz#9168645334eb942658375c56f80b4c0cb5f82c6f"
+    integrity sha1-kWhkUzTrlCZYN1xW+AtMDLX4LG8=
+    dependencies:
+      dot-case "^3.0.4"
+      tslib "^2.0.3"
+  
   path-parse@^1.0.6:
     version "1.0.7"
     resolved "https://registry.nlark.com/path-parse/download/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
     integrity sha1-+8EUtgykKzDZ2vWFjkvWi77bZzU=
+  
+  picomatch@^2.2.2:
+    version "2.3.0"
+    resolved "https://registry.nlark.com/picomatch/download/picomatch-2.3.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fpicomatch%2Fdownload%2Fpicomatch-2.3.0.tgz#f1f061de8f6a4bf022892e2d128234fb98302972"
+    integrity sha1-8fBh3o9qS/AiiS4tEoI0+5gwKXI=
   
   postcss-modules-extract-imports@^3.0.0:
     version "3.0.0"
@@ -380,6 +548,23 @@ Lockfile:
     optionalDependencies:
       fsevents "~2.3.2"
   
+  sentence-case@^3.0.4:
+    version "3.0.4"
+    resolved "https://registry.npm.taobao.org/sentence-case/download/sentence-case-3.0.4.tgz?cache=0&sync_timestamp=1606867255613&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsentence-case%2Fdownload%2Fsentence-case-3.0.4.tgz#3645a7b8c117c787fde8702056225bb62a45131f"
+    integrity sha1-NkWnuMEXx4f96HAgViJbtipFEx8=
+    dependencies:
+      no-case "^3.0.4"
+      tslib "^2.0.3"
+      upper-case-first "^2.0.2"
+  
+  snake-case@^3.0.4:
+    version "3.0.4"
+    resolved "https://registry.npm.taobao.org/snake-case/download/snake-case-3.0.4.tgz#4f2bbd568e9935abdfd593f34c691dadb49c452c"
+    integrity sha1-Tyu9Vo6ZNavf1ZPzTGkdrbScRSw=
+    dependencies:
+      dot-case "^3.0.4"
+      tslib "^2.0.3"
+  
   source-map-js@^0.6.2:
     version "0.6.2"
     resolved "https://registry.npm.taobao.org/source-map-js/download/source-map-js-0.6.2.tgz#0bb5de631b41cfbda6cfba8bd05a80efdfd2385e"
@@ -405,10 +590,55 @@ Lockfile:
     resolved "https://registry.npm.taobao.org/to-fast-properties/download/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
     integrity sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=
   
+  tslib@^2.0.3:
+    version "2.3.0"
+    resolved "https://registry.nlark.com/tslib/download/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
+    integrity sha1-gDuM2rPhK6WBpMpByIObuw2ssJ4=
+  
+  typescript@^4.4.2:
+    version "4.4.2"
+    resolved "https://registry.nlark.com/typescript/download/typescript-4.4.2.tgz?cache=0&sync_timestamp=1630012705296&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftypescript%2Fdownload%2Ftypescript-4.4.2.tgz#6d618640d430e3569a1dfb44f7d7e600ced3ee86"
+    integrity sha1-bWGGQNQw41aaHftE99fmAM7T7oY=
+  
+  upper-case-first@^2.0.2:
+    version "2.0.2"
+    resolved "https://registry.npm.taobao.org/upper-case-first/download/upper-case-first-2.0.2.tgz?cache=0&sync_timestamp=1606867254610&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fupper-case-first%2Fdownload%2Fupper-case-first-2.0.2.tgz#992c3273f882abd19d1e02894cc147117f844324"
+    integrity sha1-mSwyc/iCq9GdHgKJTMFHEX+EQyQ=
+    dependencies:
+      tslib "^2.0.3"
+  
+  upper-case@^2.0.2:
+    version "2.0.2"
+    resolved "https://registry.npm.taobao.org/upper-case/download/upper-case-2.0.2.tgz?cache=0&sync_timestamp=1606859943902&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fupper-case%2Fdownload%2Fupper-case-2.0.2.tgz#d89810823faab1df1549b7d97a76f8662bae6f7a"
+    integrity sha1-2JgQgj+qsd8VSbfZenb4Ziuub3o=
+    dependencies:
+      tslib "^2.0.3"
+  
   util-deprecate@^1.0.2:
     version "1.0.2"
     resolved "https://registry.nlark.com/util-deprecate/download/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
     integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
+  
+  vant@^3.1.2:
+    version "3.1.2"
+    resolved "https://registry.nlark.com/vant/download/vant-3.1.2.tgz?cache=0&sync_timestamp=1625536908711&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvant%2Fdownload%2Fvant-3.1.2.tgz#8777290f38c4b042d22612343e72dcab95b044ed"
+    integrity sha1-h3cpDzjEsELSJhI0PnLcq5WwRO0=
+    dependencies:
+      "@vant/icons" "^1.6.0"
+      "@vant/lazyload" "^1.2.0"
+      "@vant/popperjs" "^1.1.0"
+      "@vant/use" "^1.1.2"
+  
+  vite-plugin-style-import@^1.0.1:
+    version "1.0.1"
+    resolved "https://registry.nlark.com/vite-plugin-style-import/download/vite-plugin-style-import-1.0.1.tgz#bf61337dd11e4ebc0f355f271e06d374b1ca5c79"
+    integrity sha1-v2EzfdEeTrwPNV8nHgbTdLHKXHk=
+    dependencies:
+      "@rollup/pluginutils" "^4.1.0"
+      change-case "^4.1.2"
+      debug "^4.3.2"
+      es-module-lexer "^0.6.0"
+      magic-string "^0.25.7"
   
   vite@^2.3.7:
     version "2.3.7"
