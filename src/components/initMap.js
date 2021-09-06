@@ -1,7 +1,7 @@
 /*
  * @Author: gongwannan
  * @Date: 2021-08-31 15:30:49
- * @LastEditTime: 2021-09-01 09:06:37
+ * @LastEditTime: 2021-09-03 14:48:55
  * @LastEditors: gongwannan
  * @Description: 
  * @FilePath: \gaodeDemo\src\components\initMap.js
@@ -12,29 +12,24 @@ import {
     MapCityName
 } from "@/config/config";
 export default async function initMap(lat, lng) {
-    return new Promise((resolve, reject) => {
-        (async function () {
-            // 已载入高德地图API，则直接初始化地图
-            if (window.AMap && window.AMapUI && AMap.PolyEditor) {
-                initLoadedMap();
-                console.log('地图初始化完成')
-                resolve()
-                // 未载入高德地图API，则先载入API再初始化
-            } else {
-                await remoteLoad(
-                    `https://webapi.amap.com/maps?v=1.4.15&key=${MapKey}&plugin=AMap.PolyEditor`
-                );
-                await remoteLoad("https://webapi.amap.com/ui/1.0/main.js");
-                await remoteLoad(
-                    "https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"
-                );
-                initLoadedMap();
-                console.log('地图初始化完成')
-                resolve()
-            }
-        })()
-    })
 
+    // 已载入高德地图API，则直接初始化地图
+    if (window.AMap && window.AMapUI && AMap.PolyEditor) {
+        initLoadedMap();
+        console.log('地图初始化完成')
+        // 未载入高德地图API，则先载入API再初始化
+    } else {
+        await remoteLoad(
+            `https://webapi.amap.com/maps?v=1.4.15&key=${MapKey}&plugin=AMap.PolyEditor`
+        );
+        await remoteLoad("https://webapi.amap.com/ui/1.0/main.js");
+        await remoteLoad(
+            "https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"
+        );
+        initLoadedMap();
+        console.log('地图初始化完成')
+    }
+    // 初始化地图
     function initLoadedMap() {
         // 加载PositionPicker，loadUI的路径参数为模块名中 'ui/' 之后的部分
         let AMapUI = window.AMapUI;

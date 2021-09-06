@@ -1,3 +1,11 @@
+<!--
+ * @Author: gongwannan
+ * @Date: 2021-08-30 11:00:05
+ * @LastEditTime: 2021-09-03 17:59:12
+ * @LastEditors: gongwannan
+ * @Description: 
+ * @FilePath: \gaodeDemo\src\components\map.vue
+-->
 <template>
   <div class="m-map">
     <div id="js-container" class="map">正在加载数据 ...</div>
@@ -9,89 +17,30 @@
 </template>
 
 <script>
-import { ref, onMounted } from "vue";
 import initMap from "./initMap";
-const editMap = () => import("./editMap");
+import { markOne, markTwo, range, rangeClose } from "./editMap.js";
+let timer, context, args;
 export default {
   props: ["lat", "lng"],
-  async setup(props) {
-    let markType = ref("type1");
+  setup(props) {
     initMap(props.lat, props.lng);
-    // await initMap(props.lat, props.lng);
-    let markOnMap = editMap();
-    return {
-      markType,
-      markOnMap,
-    };
+    return { markOne, markTwo, range, rangeClose };
+  },
+  created() {
+    let customFunc = this.debounce(console.log);
+    window.addEventListener("mousemove", customFunc);
   },
   data() {
     return {};
   },
-  methods: {
-    markOne() {
-      this.markType = "type1";
-      map.on("click", this.markOnMap);
-      map.off("click", this.rangeDraw);
-    },
-    markTwo() {
-      this.markType = "type2";
-      map.on("click", this.markOnMap);
-      map.off("click", this.rangeDraw);
-    },
-    range() {
-      map.on("click", this.rangeDraw);
-      map.off("click", this.markOnMap);
-    },
-    rangeclose() {
-      this.polyEditor.close();
-    },
-    rangeDraw(e) {
-      let lng = e.lnglat.getLng();
-      let lat = e.lnglat.getLat();
-      this.polygonDraw("polyEditor", {
-        path: [
-          [lng, lat],
-          [lng + 0.1, lat],
-          [lng + 0.1, lat + 0.1],
-          [lng, lat + 0.1],
-        ],
-        strokeColor: this.randomColor(),
-        strokeWeight: 6,
-        strokeOpacity: 0.2,
-        fillOpacity: 0.4,
-        fillColor: this.randomColor(),
-        zIndex: 50,
-        draggable: true,
-      });
-    },
-    randomColor() {
-      return "#" + Math.floor(0xffffff * Math.random()).toString(16);
-    },
-    // 多边形的绘制与编辑
-    polygonDraw(polygonName, params) {
-      var polygon = new window.AMap.Polygon(params);
-      window.map.add(polygon);
-      // 缩放地图到合适的视野级别
-      window.map.setFitView([polygon]);
-      polygon.on("mouseover", (e) => {
-        this.openInfo(e);
-      });
-      polygon.on("mouseleave", (e) => {});
-      this[polygonName] = new AMap.PolyEditor(window.map, polygon);
-      polygon.on("click", (e) => {
-        this[polygonName].open();
-        console.log(this[polygonName]);
-      });
-    },
-    // 在地图上标点
-  },
+  methods: {},
 };
 </script>
 
 <style lang="css">
 .m-map {
-  height: 80vh;
-  width: 100vw;
+  height: 95vh;
+  width: 95vw;
   position: relative;
 }
 .m-map .map {

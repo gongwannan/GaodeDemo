@@ -1,7 +1,7 @@
 /*
  * @Author: gongwannan
  * @Date: 2021-08-30 09:37:26
- * @LastEditTime: 2021-08-31 17:35:58
+ * @LastEditTime: 2021-09-03 18:03:57
  * @LastEditors: gongwannan
  * @Description: In User Settings Edit
  * @FilePath: \gaodeDemo\src\common\mixin.ts
@@ -53,34 +53,44 @@ export default {
       });
       return result;
     },
-    /**
-     * @description: 防抖
-     * @param {function} fn
-     * @param {number} time
-     * @return {*}
-     */
-    debounce(fn: () => any, time: number) {
-      let task: number;
-      return function () {
-        if (task) {
-          clearTimeout(task);
+    debounce(
+      func: () => any = console.log,
+      wait: number = 50,
+      immediate: boolean = false
+    ) {
+      let timer: number | null, context: object | null, args: any;
+      const later: object = () =>
+        setTimeout(() => {
+          timer = null;
+          if (!immediate) {
+            func.apply(context, args);
+            context = args = null;
+          }
+        }, wait);
+
+      return function (...params: []) {
+        if (!timer) {
+          timer = later();
+          if (immediate) {
+            func.apply(this, params);
+          } else {
+            context = this;
+            args = params;
+          }
+        } else {
+          clearTimeout(timer);
+          timer = later();
         }
-        task = setTimeout(fn.apply(this, arguments), time);
       };
     },
-    /**
-     * @description: 节流
-     * @param {function} fn
-     * @param {number} time
-     * @return {*}
-     */
+
     throttle(fn: () => any, time: number) {
       let task: unknown;
-      return function () {
+      return function (...params: []) {
         if (!task) {
           task = setTimeout(() => {
             task = null;
-            fn.apply(this, arguments);
+            fn.apply(this, params);
           });
         }
       };

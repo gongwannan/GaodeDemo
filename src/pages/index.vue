@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-08-05 14:03:38
- * @LastEditTime: 2021-08-30 15:12:57
+ * @LastEditTime: 2021-09-01 09:10:07
  * @LastEditors: gongwannan
  * @Description: 
  * @FilePath: \gaodeDemo\src\pages\index.vue
@@ -25,4 +25,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.content
+  height: 100vh
+  width: 100vw
 </style>
