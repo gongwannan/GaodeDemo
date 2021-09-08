@@ -1,10 +1,10 @@
 <!--
  * @Author: your name
  * @Date: 2021-08-05 14:03:38
- * @LastEditTime: 2021-09-01 09:10:07
+ * @LastEditTime: 2021-09-08 17:21:01
  * @LastEditors: gongwannan
  * @Description: 
- * @FilePath: \gaodeDemo\src\pages\index.vue
+ * @FilePath: \GaodeDemo\src\pages\index.vue
 -->
 <template>
   <div class="content">
@@ -12,9 +12,10 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Map from "../components/map.vue";
 export default {
+  setup(props: object) {},
   components: { Map },
   data() {
     return {};
