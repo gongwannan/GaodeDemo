@@ -1,12 +1,11 @@
 /*
  * @Author: gongwannan
  * @Date: 2021-08-30 09:37:26
- * @LastEditTime: 2021-09-03 18:03:57
+ * @LastEditTime: 2021-09-10 16:15:46
  * @LastEditors: gongwannan
  * @Description: In User Settings Edit
- * @FilePath: \gaodeDemo\src\common\mixin.ts
+ * @FilePath: \GaodeDemo\src\common\mixin.ts
  */
-import { unknownProp } from "vant/lib/utils";
 import { isValidKey } from "./utils";
 export default {
   methods: {
@@ -53,13 +52,20 @@ export default {
       });
       return result;
     },
+    /**
+     * @description: 防抖处理函数
+     * @param func 需要防抖的函数
+     * @param wait 等待时间
+     * @param immediate 是否立即调用
+     * @return function 返回一个处理后的函数
+     */
     debounce(
       func: () => any = console.log,
       wait: number = 50,
       immediate: boolean = false
     ) {
       let timer: number | null, context: object | null, args: any;
-      const later: object = () =>
+      const later = () =>
         setTimeout(() => {
           timer = null;
           if (!immediate) {
@@ -83,8 +89,28 @@ export default {
         }
       };
     },
-
-    throttle(fn: () => any, time: number) {
+    /**
+     * @description: 简单的防抖处理函数
+     * @param {function} func需要防抖的函数
+     * @param {number} wait等待时间
+     * @return {function} 处理后的函数
+     */
+    debounceSimple(func: () => any, wait: number) {
+      let timer: number;
+      return function (...params: []) {
+        if (!timer) {
+          timer = setTimeout(() => {
+            func.apply(this, params);
+          }, wait);
+        } else {
+          clearTimeout(timer);
+          timer = setTimeout(() => {
+            func.apply(this, params);
+          }, wait);
+        }
+      };
+    },
+    throttleSimple(fn: () => any, time: number) {
       let task: unknown;
       return function (...params: []) {
         if (!task) {

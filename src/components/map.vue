@@ -1,10 +1,10 @@
 <!--
  * @Author: gongwannan
  * @Date: 2021-08-30 11:00:05
- * @LastEditTime: 2021-09-03 17:59:12
+ * @LastEditTime: 2021-09-09 10:55:50
  * @LastEditors: gongwannan
  * @Description: 
- * @FilePath: \gaodeDemo\src\components\map.vue
+ * @FilePath: \GaodeDemo\src\components\map.vue
 -->
 <template>
   <div class="m-map">
@@ -27,8 +27,8 @@ export default {
     return { markOne, markTwo, range, rangeClose };
   },
   created() {
-    let customFunc = this.debounce(console.log);
-    window.addEventListener("mousemove", customFunc);
+    // let customFunc = this.debounce(console.log);
+    // window.addEventListener("mousemove", customFunc);
   },
   data() {
     return {};

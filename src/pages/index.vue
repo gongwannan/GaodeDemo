@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-08-05 14:03:38
- * @LastEditTime: 2021-09-08 17:21:01
+ * @LastEditTime: 2021-09-10 16:18:23
  * @LastEditors: gongwannan
  * @Description: 
  * @FilePath: \GaodeDemo\src\pages\index.vue
@@ -9,6 +9,7 @@
 <template>
   <div class="content">
     <Map></Map>
+    <canvas id="drawing" class="canvas"></canvas>
   </div>
 </template>
 
@@ -21,7 +22,19 @@ export default {
     return {};
   },
   methods: {},
-  async created() {},
+  created() {
+    let debounceFunc = this.debounceSimple(console.log, 500);
+    window.addEventListener("mousemove", debounceFunc);
+  },
+  mounted() {
+    let drawing: any = document.getElementById("drawing");
+    console.log(drawing);
+    if (drawing.getContext) {
+      let context = drawing.getContext("2d");
+      context.fillStyle = "red";
+      context.fillRect(0, 0, 50, 50);
+    }
+  },
 };
 </script>
 
@@ -29,4 +42,8 @@ export default {
 .content
   height: 100vh
   width: 100vw
+
+.canvas
+  height: 100px
+  width: 100px
 </style>
