@@ -1,7 +1,7 @@
 <!--
  * @Author: gongwannan
  * @Date: 2021-08-30 11:00:05
- * @LastEditTime: 2021-09-09 10:55:50
+ * @LastEditTime: 2021-09-14 10:26:08
  * @LastEditors: gongwannan
  * @Description: 
  * @FilePath: \GaodeDemo\src\components\map.vue
@@ -25,10 +25,6 @@ export default {
   setup(props) {
     initMap(props.lat, props.lng);
     return { markOne, markTwo, range, rangeClose };
-  },
-  created() {
-    // let customFunc = this.debounce(console.log);
-    // window.addEventListener("mousemove", customFunc);
   },
   data() {
     return {};

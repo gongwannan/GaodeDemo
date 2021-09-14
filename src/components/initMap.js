@@ -1,10 +1,10 @@
 /*
  * @Author: gongwannan
  * @Date: 2021-08-31 15:30:49
- * @LastEditTime: 2021-09-03 14:48:55
+ * @LastEditTime: 2021-09-14 10:27:21
  * @LastEditors: gongwannan
  * @Description: 
- * @FilePath: \gaodeDemo\src\components\initMap.js
+ * @FilePath: \GaodeDemo\src\components\initMap.js
  */
 import remoteLoad from "@/utils/remoteLoad.js";
 import {
@@ -12,7 +12,6 @@ import {
     MapCityName
 } from "@/config/config";
 export default async function initMap(lat, lng) {
-
     // 已载入高德地图API，则直接初始化地图
     if (window.AMap && window.AMapUI && AMap.PolyEditor) {
         initLoadedMap();

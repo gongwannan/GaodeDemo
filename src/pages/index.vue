@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-08-05 14:03:38
- * @LastEditTime: 2021-09-14 10:13:48
+ * @LastEditTime: 2021-09-14 10:26:47
  * @LastEditors: gongwannan
  * @Description: 
  * @FilePath: \GaodeDemo\src\pages\index.vue
@@ -17,17 +17,15 @@
 <script lang="ts">
 import Map from "../components/map.vue";
 export default {
-  setup(props: object) {},
+  setup() {},
   components: { Map },
   data() {
     return {};
   },
   methods: {},
-  created() {
+  mounted() {
     let debounceFunc = this.debounceSimple(console.log, 500);
     window.addEventListener("mousemove", debounceFunc);
-  },
-  mounted() {
     let drawing: any = document.getElementById("drawing");
     console.log(drawing);
     if (drawing.getContext) {
