@@ -1,7 +1,7 @@
 /*
  * @Author: gongwannan
  * @Date: 2021-08-30 09:37:26
- * @LastEditTime: 2021-09-10 16:15:46
+ * @LastEditTime: 2021-09-13 17:59:59
  * @LastEditors: gongwannan
  * @Description: In User Settings Edit
  * @FilePath: \GaodeDemo\src\common\mixin.ts
@@ -117,7 +117,7 @@ export default {
           task = setTimeout(() => {
             task = null;
             fn.apply(this, params);
-          });
+          }, time);
         }
       };
     },
