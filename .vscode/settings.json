@@ -5,6 +5,7 @@
     "vant",
     "vite",
     "vitejs",
+    "vnode",
     "vuex"
   ]
 }

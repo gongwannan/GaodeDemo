@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-08-05 14:03:38
- * @LastEditTime: 2021-09-10 16:18:23
+ * @LastEditTime: 2021-09-14 10:13:48
  * @LastEditors: gongwannan
  * @Description: 
  * @FilePath: \GaodeDemo\src\pages\index.vue
@@ -10,6 +10,7 @@
   <div class="content">
     <Map></Map>
     <canvas id="drawing" class="canvas"></canvas>
+    <div v-translate>name</div>
   </div>
 </template>
 
