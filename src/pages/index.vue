@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-08-05 14:03:38
- * @LastEditTime: 2021-09-14 10:26:47
+ * @LastEditTime: 2021-09-14 12:37:09
  * @LastEditors: gongwannan
  * @Description: 
  * @FilePath: \GaodeDemo\src\pages\index.vue
@@ -23,9 +23,11 @@ export default {
     return {};
   },
   methods: {},
-  mounted() {
+  created() {
     let debounceFunc = this.debounceSimple(console.log, 500);
     window.addEventListener("mousemove", debounceFunc);
+  },
+  mounted() {
     let drawing: any = document.getElementById("drawing");
     console.log(drawing);
     if (drawing.getContext) {

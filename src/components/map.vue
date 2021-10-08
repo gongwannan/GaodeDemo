@@ -1,7 +1,7 @@
 <!--
  * @Author: gongwannan
  * @Date: 2021-08-30 11:00:05
- * @LastEditTime: 2021-09-14 10:26:08
+ * @LastEditTime: 2021-09-14 14:22:09
  * @LastEditors: gongwannan
  * @Description: 
  * @FilePath: \GaodeDemo\src\components\map.vue
@@ -12,7 +12,7 @@
     <button @click="markOne()">标记1</button>
     <button @click="markTwo()">标记2</button>
     <button @click="range()">围栏划分</button>
-    <button @click="rangeclose()">围栏划分结束</button>
+    <button @click="rangeClose()">围栏划分结束</button>
   </div>
 </template>
 
@@ -33,40 +33,5 @@ export default {
 };
 </script>
 
-<style lang="css">
-.m-map {
-  height: 95vh;
-  width: 95vw;
-  position: relative;
-}
-.m-map .map {
-  width: 100%;
-  height: 100%;
-}
-.m-map .search {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 285px;
-  z-index: 1;
-}
-.m-map .search input {
-  width: 180px;
-  border: 1px solid #ccc;
-  line-height: 20px;
-  padding: 5px;
-  outline: none;
-}
-.m-map .search button {
-  line-height: 26px;
-  background: #fff;
-  border: 1px solid #ccc;
-  width: 50px;
-  text-align: center;
-}
-.m-map .result {
-  max-height: 300px;
-  overflow: auto;
-  margin-top: 10px;
-}
+<style lang="sass" scoped>
 </style>
